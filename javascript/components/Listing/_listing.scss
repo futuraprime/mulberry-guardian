@@ -1,3 +1,19 @@
 .component.listing {
-  
+  padding: 5px 0;
+  li {
+    a {
+      display: block;
+      padding: 5px 10px;
+      background-color: #ddd;
+      margin-bottom: 1px;
+      &:link {
+        color: #333;
+      }
+
+      &:visited {
+        color: #999;
+      }
+
+    }
+  }
 }
