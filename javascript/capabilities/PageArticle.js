@@ -9,7 +9,6 @@ mulberry.capability('PageArticle', {
   ],
 
   init : function() {
-    console.log(arguments, this, this.baseObj.params);
   }
 });
 

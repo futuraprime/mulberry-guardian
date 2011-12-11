@@ -11,38 +11,47 @@ dojo.provide('client.routes');
  *
  */
 
-mulberry.route('/article/:articleid', function(params, route) {
-  /**
-   * You will probably want something like this here :)
-   */
+dojo.subscribe('/routes/loaded', function() {
 
-  var data = n.listing.get(params.articleid);
+  mulberry.route('/article/:articleid', function(params, route) {
+    /**
+     * You will probably want something like this here :)
+     */
 
-  var page = toura.app.PageFactory.createPage({
-    pageController : 'article',
-    params : params,
-    resource : data,
-    name : data.attributes.webTitle
+    var data = n.listing.get(params.articleid);
+
+    var page = toura.app.PageFactory.createPage({
+      pageController : 'article',
+      params : params,
+      resource : data,
+      name : data.attributes.webTitle
+    });
+
+    toura.app.UI.showPage(page);
   });
 
-  toura.app.UI.showPage(page);
-});
 
+  mulberry.route('/home', function(params, route) {
+    /**
+     * You will probably want something like this here :)
+     */
 
-mulberry.route('/listing/', function(params, route) {
-  /**
-   * You will probably want something like this here :)
-   */
+    var data = n.listing.models;
 
-  var data = n.listing.models;
+    var page = toura.app.PageFactory.createPage({
+      pageController : 'listing',
+      params : params,
+      resource: data,
+      name: "Listing"
+    });
 
-  var page = toura.app.PageFactory.createPage({
-    pageController : 'listing',
-    params : params,
-    resource: data,
-    name: "Listing"
-  });
+    // dojo.subscribe('/content/update', function(message) {
+    //   console.log("UPDATE RECIEVED");
+    //   toura.app.UI.showPage(page);
+    // });
 
-  toura.app.UI.showPage(page);
+    toura.app.UI.showPage(page);
+  }, true);
+
 });
 

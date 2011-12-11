@@ -6,6 +6,7 @@ mulberry.component('Article', {
   prep : function() {
     //console.log('ARTICLE: ',this.baseObj);
     this.article = this.node ? this.node.resource.attributes : {};
+    console.log(this.article);
   },
 
   init : function() {
