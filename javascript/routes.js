@@ -45,11 +45,6 @@ dojo.subscribe('/routes/loaded', function() {
       name: "Listing"
     });
 
-    // dojo.subscribe('/content/update', function(message) {
-    //   console.log("UPDATE RECIEVED");
-    //   toura.app.UI.showPage(page);
-    // });
-
     toura.app.UI.showPage(page);
   }, true);
 
