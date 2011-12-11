@@ -14,7 +14,6 @@ n.listing.fetch();
 
 dojo.require('client.capabilities.PageArticle');
 dojo.require('client.capabilities.PageListing');
-dojo.require('client.components.Vomit');
 dojo.require('client.components.Listing');
 dojo.require('client.components.Article');
 dojo.require('client.capabilities.PageHome');
