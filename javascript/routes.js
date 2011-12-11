@@ -11,13 +11,13 @@ dojo.provide('client.routes');
  *
  */
 
-mulberry.route('article/:articleid', function(params, route) {
+mulberry.route('/article/:articleid', function(params, route) {
   /**
    * You will probably want something like this here :)
    */
 
   var page = toura.app.PageFactory.createPage({
-    pageController : 'yourCustomPageController',
+    pageController : 'article',
     params : params
   });
 

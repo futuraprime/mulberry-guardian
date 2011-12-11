@@ -1,9 +1,9 @@
-dojo.provide('client.model.guardian');
+dojo.provide('client.models.guardian');
 
 dojo.require('client.vendor.backbone.backbone');
 
 
-dojo.declare('client.model.guardian', null, {
+dojo.declare('client.models.guardian', null, {
 
   guardian_api_key : "tmmz9wv5uhwy47tf6t6h6sb5",
 

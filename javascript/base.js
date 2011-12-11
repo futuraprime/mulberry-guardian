@@ -4,9 +4,9 @@
  */
 dojo.require('client.routes');
 
-dojo.require('client.model.guardian');
+// data modeling
+dojo.require('client.models.guardian');
 
-dojo.require('client.components.Test');
-
-var n = new client.model.guardian();
-n.listing.add(client.model.guardian.prototype.sampledata);
+var n = new client.models.guardian();
+n.listing.add(client.models.guardian.prototype.sampledata);
+dojo.require('client.capabilities.PageArticle');
