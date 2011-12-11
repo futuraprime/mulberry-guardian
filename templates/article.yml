@@ -4,6 +4,8 @@ article:
     # to add JavaScript functionality to this page. For more details, see the
     # Mulberry documentation on Capabilities
     - name: PageArticle
+      components:
+        - index:custom.Article
   screens:
     - name: index
       regions:
@@ -19,6 +21,7 @@ article:
           # By default, `scrollable` is false
           scrollable: true
           components:
+            - custom.Article
             # Add your components here as a list. For example:
             # - BodyText
             # - ImageGallery

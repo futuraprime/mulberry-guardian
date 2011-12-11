@@ -16,23 +16,31 @@ mulberry.route('/article/:articleid', function(params, route) {
    * You will probably want something like this here :)
    */
 
+  var data = n.listing.get(params.articleid);
+
   var page = toura.app.PageFactory.createPage({
     pageController : 'article',
-    params : params
+    params : params,
+    resource : data,
+    name : data.attributes.webTitle
   });
 
   toura.app.UI.showPage(page);
 });
 
 
-mulberry.route('listing', function(params, route) {
+mulberry.route('/listing/', function(params, route) {
   /**
    * You will probably want something like this here :)
    */
 
+  var data = n.listing.models;
+
   var page = toura.app.PageFactory.createPage({
-    pageController : 'yourCustomPageController',
-    params : params
+    pageController : 'listing',
+    params : params,
+    resource: data,
+    name: "Listing"
   });
 
   toura.app.UI.showPage(page);

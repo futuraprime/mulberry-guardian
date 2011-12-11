@@ -8,6 +8,11 @@ dojo.require('client.routes');
 dojo.require('client.models.guardian');
 
 var n = new client.models.guardian();
+
 n.listing.add(client.models.guardian.prototype.sampledata);
+
 dojo.require('client.capabilities.PageArticle');
 dojo.require('client.capabilities.PageListing');
+dojo.require('client.components.Vomit');
+dojo.require('client.components.Listing');
+dojo.require('client.components.Article');

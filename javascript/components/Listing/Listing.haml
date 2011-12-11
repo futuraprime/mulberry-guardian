@@ -1,0 +1,4 @@
+%ul.component.listing
+  :each element in list
+    %li
+      %a{href: '#/article/'+element.id} =element.attributes.webTitle
