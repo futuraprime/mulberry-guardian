@@ -23,7 +23,7 @@ dojo.require('client.vendor.backbone.backbone');
       var remslash_id = attributes.id.replace(/\//g, '_');
       this.set({id: remslash_id});
       dojo.publish('/content/update');
-    },
+    }
 
   });
 
@@ -35,6 +35,14 @@ dojo.require('client.vendor.backbone.backbone');
 
     parse: function(response) {
       return response.response.results;
+    },
+
+    fetchOrGet: function(id) {
+      if (this.get(id)) {
+        return this.get(id);
+      }
+
+
     }
 
   });

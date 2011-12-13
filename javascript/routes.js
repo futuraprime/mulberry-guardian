@@ -18,7 +18,7 @@ dojo.subscribe('/routes/loaded', function() {
      * You will probably want something like this here :)
      */
 
-    var data = n.listing.get(params.articleid);
+    var data = n.listing.fetchOrGet(params.articleid);
 
     var page = toura.app.PageFactory.createPage({
       pageController : 'article',
