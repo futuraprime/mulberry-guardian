@@ -2,6 +2,8 @@
 @import 'helpers/mixins';
 @import 'helpers/forms';
 
+@import 'splash';
+
 body {
   color: $text-color;
   font-family: $base-font;
@@ -22,8 +24,5 @@ body {
     margin-bottom: 0;
   }
 }
-@import '../../javascript/components/listing/listing';
-@import '../../javascript/components/Listing/listing';
-@import '../../javascript/components/article/article';
-@import '../../javascript/components/Article/article';
-@import '../../javascript/components/ListingLink/listing-link';
+
+

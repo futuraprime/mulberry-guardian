@@ -3,7 +3,9 @@
 @import 'page-nav';
 @import 'detail-title';
 @import 'sibling-nav';
+@import 'search-input';
 
+@import 'delete-button';
 
 // content components
 @import 'asset-list';
@@ -19,6 +21,7 @@
 @import 'feed-item-detail';
 @import 'feed-item-list';
 @import 'hotspots';
+@import 'image-caption';
 @import 'image-gallery';
 @import 'image-scroller';
 @import 'location-list';
@@ -27,8 +30,8 @@
 @import 'node-title-banner';
 @import 'page-header-image';
 @import 'pin-info';
-@import 'search-input';
 @import 'search-results';
 @import 'social-message';
+@import 'video-caption';
 @import 'video-player';
 @import 'zoomable-image-gallery';

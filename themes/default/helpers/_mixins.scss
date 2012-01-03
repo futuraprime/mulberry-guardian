@@ -15,11 +15,14 @@
   }
 }
 
-@mixin background-shadow {
-  .ios & {
-    background: transparent url(../icons/bg-inner-shadow.png) no-repeat;
-    background-size: cover;
-    background-position-y: 100%;
+@mixin background-shadow($side:bottom) {
+  border-#{$side}: 1px solid;
+  @if ($font-scheme == dark) {
+    background-color: darken($app-background-color, 5%);
+    border-#{$side}-color: darken($app-background-color, 17%);
+  } @else {
+    background-color: lighten($app-background-color, 5%);
+    border-#{$side}-color: lighten($app-background-color, 17%);
   }
 }
 
@@ -155,12 +158,12 @@
   }
 
   &.#{$type} a {
-    background: url(../icons/light/btn-page-nav-#{$type}.png) no-repeat;
+    background: url(resources/icons/light/btn-page-nav-#{$type}.png) no-repeat;
     background-position-y: center;
   }
 
   &.#{$type} a:active {
-    background-image: url(../icons/dark/btn-page-nav-#{$type}.png);
+    background-image: url(resources/icons/dark/btn-page-nav-#{$type}.png);
   }
 
   &.#{$type}:first-child a {
@@ -175,7 +178,7 @@
 @mixin asset-icon($type) {
   &.#{$type} a {
     background: {
-      image: url('../icons/dark/icon-asset-#{$type}.png');
+      image: url('resources/icons/dark/icon-asset-#{$type}.png');
       repeat: no-repeat;
       position: center right;
       size: 28px 26px;
@@ -222,6 +225,31 @@
   &.not-moving a:active {
     background-color: transparentize($child-node-active-color, .5);
   }
+}
+
+@mixin bottom-divider($space: 5px) {
+  padding-bottom: $space;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: $space;
+}
+
+@mixin fixed-gallery {
+  .tablet .region.size-fixed & {
+    position: static;
+
+    @media (orientation: landscape) {
+      height: 300px;
+    }
+
+    @media (orientation: portrait) {
+      height: 450px;
+    }
+  }
+}
+
+@mixin caption-text {
+  font-size: 14px;
+  color: #555;
 }
 
 @function offset-text-color($amount) {
